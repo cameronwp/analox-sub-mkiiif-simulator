@@ -90,8 +90,8 @@ function write(port) {
  * @param {SerialPort} port
  */
 function loop(port) {
-  write(port);
   return function() {
+    write(port);
     setInterval(() => {
       write(port);
     }, INTERVAL)
