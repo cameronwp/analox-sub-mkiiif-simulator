@@ -3,7 +3,7 @@ const INTERVAL = 5000;
 
 /**
  * Create the initial base with datetime.
- * @returns {string} `> DD-MON-YYYY HH:MM:SS`
+ * @returns {string} `>DD-MON-YYYY HH:MM:SS`
  */
 function getBase() {
   return '>' + moment().format('DD-MMM-YYYY HH:MM:ss').toUpperCase();
