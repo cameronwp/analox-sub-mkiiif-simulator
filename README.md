@@ -65,10 +65,10 @@ Windows: [Maybe this](https://github.com/StudioEtrange/socat-windows)? (I haven'
 npm run start
 ```
 
-The first thing that happens is we link to a temporary virtual port on `/dev/tty1`. We're solely using it as a writer. Open another terminal and read from the "reader" port (`/dev/tty2`) with:
+The first thing that happens is we link to a temporary virtual port on `/tmp/tty1`. We're solely using it as a writer. Open another terminal and read from the "reader" port (`/tmp/tty2`) with:
 
 ```sh
-cat < /dev/tty2
+cat < /tmp/tty2
 ```
 
 You should see values outputted every 5 seconds.
