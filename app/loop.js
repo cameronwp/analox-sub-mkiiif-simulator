@@ -1,5 +1,5 @@
 const moment = require('moment');
-const INTERVAL = 5000;
+const INTERVAL = 5000; // should be 5000 for the analox's default setting
 
 /**
  * Create the initial base with datetime.
@@ -43,7 +43,7 @@ function message(...values) {
   const data = [ getBase(), ...values, 'ST=Af' ].join(', ');
   const ck = checksum(data);
 
-  return `${data}, CK=${ck}\n`;
+  return `${data}, CK=${ck}${String.fromCharCode(13)}`;
 }
 
 /**
